@@ -1,19 +1,12 @@
-package by.education.vintilov.project_two.Strategy_Pattern.Implementations;
+package by.education.vintilov.project_two.Strategy_Pattern.java.Implementations;
 
-import by.education.vintilov.project_two.Strategy_Pattern.AlgorithmStrategy;
-
-import java.util.Arrays;
+import by.education.vintilov.project_two.Strategy_Pattern.java.AlgorithmStrategy;
 
 public class Fibonacci_sequence implements AlgorithmStrategy {
 
 
     @Override
-    public int loopFor(int numberForSequence) {
-        System.out.println("Fibonacci calculation result: " + Arrays.toString(solvebyloopfor(numberForSequence)));
-        return 0;
-    }
-
-    public int[] solvebyloopfor(int numberForSequence) {
+    public int[] loopFor(int numberForSequence) {
         int[] outputSequence = new int[0];
         if (numberForSequence > 2) {
             outputSequence = new int[numberForSequence];
@@ -29,12 +22,7 @@ public class Fibonacci_sequence implements AlgorithmStrategy {
     }
 
     @Override
-    public int loopWhile(int numberForSequence) {
-        System.out.println("Fibonacci calculation result: " + Arrays.toString(solveByLoopWhile(numberForSequence)));
-        return 0;
-    }
-
-    public int[] solveByLoopWhile(int numberForSequence) {
+    public int[] loopWhile(int numberForSequence) {
         int[] outputSequence = new int[0];
 
         if (numberForSequence > 2) {
@@ -54,26 +42,19 @@ public class Fibonacci_sequence implements AlgorithmStrategy {
         return outputSequence;
     }
 
+
     @Override
-    public int loopDoWhile(int inputValues) {
-        System.out.println("Fibonacci calculation result: " + Arrays.toString(solveByLoopDoWhile(inputValues)));
-        return 0;
-    }
-
-    public int[] solveByLoopDoWhile(int numberForSequence) {
+    public int[] loopDoWhile(int numberForSequence) {
         int[] outputSequence = new int[0];
-
         if (numberForSequence > 2) {
             outputSequence = new int[numberForSequence];
             outputSequence[0] = 0;
             outputSequence[1] = 1;
             int iteratoin = 2;
-
             do {
                 outputSequence[iteratoin] = outputSequence[iteratoin - 1] + outputSequence[iteratoin - 2];
                 iteratoin++;
             } while (iteratoin < numberForSequence);
-
         }
         return outputSequence;
     }
