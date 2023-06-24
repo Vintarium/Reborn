@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class fibonacciSequenceTest {
+public class FibonacciSequenceTest {
     private final Fibonacci_sequence fibonacci_sequence = new Fibonacci_sequence();
     private final int[] expected = new int[]{0, 1, 1, 2, 3, 5, 8, 13, 21, 34};
     private final int valueForSequence = 10;
