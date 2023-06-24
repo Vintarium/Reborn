@@ -1,6 +1,6 @@
-package by.education.vintilov.project_two.Strategy_Pattern.test;
+package by.education.vintilov.Strategy_Pattern.test;
 
-import by.education.vintilov.project_two.Strategy_Pattern.java.Implementations.Fibonacci_sequence;
+import by.education.vintilov.Strategy_Pattern.java.Implementations.Fibonacci_sequence;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

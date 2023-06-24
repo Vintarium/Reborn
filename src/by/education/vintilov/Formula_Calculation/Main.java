@@ -1,4 +1,4 @@
-package by.education.vintilov.project_two.Formula_Calculation.java;
+package by.education.vintilov.Formula_Calculation;
 
 import java.util.Scanner;
 import java.lang.Math;

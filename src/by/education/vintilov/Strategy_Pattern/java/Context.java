@@ -1,7 +1,8 @@
-package by.education.vintilov.project_two.Strategy_Pattern.java;
+package by.education.vintilov.Strategy_Pattern.java;
 
-import by.education.vintilov.project_two.Strategy_Pattern.java.Implementations.Factorial;
-import by.education.vintilov.project_two.Strategy_Pattern.java.Implementations.Fibonacci_sequence;
+import by.education.vintilov.Strategy_Pattern.java.Implementations.Factorial;
+import by.education.vintilov.Strategy_Pattern.java.Implementations.Fibonacci_sequence;
+
 import java.util.Arrays;
 
 public class Context {

@@ -1,6 +1,6 @@
-package by.education.vintilov.project_two.Strategy_Pattern.java.Implementations;
+package by.education.vintilov.Strategy_Pattern.java.Implementations;
 
-import by.education.vintilov.project_two.Strategy_Pattern.java.AlgorithmStrategy;
+import by.education.vintilov.Strategy_Pattern.java.AlgorithmStrategy;
 
 public class Fibonacci_sequence implements AlgorithmStrategy {
 

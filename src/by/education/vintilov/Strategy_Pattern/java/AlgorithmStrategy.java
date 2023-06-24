@@ -1,4 +1,4 @@
-package by.education.vintilov.project_two.Strategy_Pattern.java;
+package by.education.vintilov.Strategy_Pattern.java;
 
 public interface AlgorithmStrategy {
      int [] loopFor(int value);

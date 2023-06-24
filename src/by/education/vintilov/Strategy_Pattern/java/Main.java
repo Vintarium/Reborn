@@ -1,6 +1,4 @@
-package by.education.vintilov.project_two.Strategy_Pattern.java;
-
-import java.util.Arrays;
+package by.education.vintilov.Strategy_Pattern.java;
 
 public class Main {
     public static void main(String[] args) {
