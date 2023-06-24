@@ -5,7 +5,7 @@ import java.lang.Math;
 
 public class Main {
     public static void main(String[] args) {
-        double answer = 0;
+        double answer;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your integer numbers (Press Enter after each number): ");
         int firstArgument = scanner.nextInt();

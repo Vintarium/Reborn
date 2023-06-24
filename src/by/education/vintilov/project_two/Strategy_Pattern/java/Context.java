@@ -2,11 +2,12 @@ package by.education.vintilov.project_two.Strategy_Pattern.java;
 
 import by.education.vintilov.project_two.Strategy_Pattern.java.Implementations.Factorial;
 import by.education.vintilov.project_two.Strategy_Pattern.java.Implementations.Fibonacci_sequence;
+import java.util.Arrays;
 
 public class Context {
-    int kindOfAlgorithm;
-    int kindOfLoop;
-    int valueForCalculating;
+    private int kindOfAlgorithm;
+    private int kindOfLoop;
+    private int valueForCalculating;
 
     private AlgorithmStrategy algorithmStrategy;
 
@@ -14,25 +15,31 @@ public class Context {
         this.kindOfAlgorithm = kindOfAlgorithm;
         this.kindOfLoop = kindOfLoop;
         this.valueForCalculating = valueForCalculating;
+
+        if (kindOfAlgorithm == 1) algorithmStrategy = new Fibonacci_sequence();
+        else if (kindOfAlgorithm == 2) algorithmStrategy = new Factorial();
+
     }
 
-    public int[] calcilateSequence() {
-        if (kindOfAlgorithm == 1) {
-            algorithmStrategy = new Fibonacci_sequence();
-            if (kindOfLoop == 1)  return algorithmStrategy.loopFor(valueForCalculating);
-            else if (kindOfLoop == 2) return algorithmStrategy.loopWhile(valueForCalculating);
-            else if (kindOfLoop == 3) return algorithmStrategy.loopDoWhile(valueForCalculating);
-            else System.out.println("Incorrect value.Try again");
+    public void calcilateSequence() {
+        if (kindOfLoop == 1)
+            System.out.println(Arrays.toString(useLoopFor(algorithmStrategy, valueForCalculating)));
+        else if (kindOfLoop == 2)
+            System.out.println(Arrays.toString(useLoopWhile(algorithmStrategy, valueForCalculating)));
+        else if (kindOfLoop == 3)
+            System.out.println(Arrays.toString(useLoopDoWhile(algorithmStrategy, valueForCalculating)));
+        else System.out.println("Incorrect value.Try again");
+    }
 
-        } else if (kindOfAlgorithm == 2) {
-            algorithmStrategy = new Factorial();
-            if (kindOfLoop == 1) return algorithmStrategy.loopFor(valueForCalculating);
-            else if (kindOfLoop == 2) return  algorithmStrategy.loopWhile(valueForCalculating);
-            else if (kindOfLoop == 3) return algorithmStrategy.loopDoWhile(valueForCalculating);
-            else System.out.println("Incorrect value.Try again");
+    private int[] useLoopFor(AlgorithmStrategy algorithmStrategy, int valueForCalculating) {
+        return algorithmStrategy.loopFor(valueForCalculating);
 
-        } else System.out.println("Incorrect value.Try again");
-        return new int[0];
+    }
+    private int[] useLoopWhile(AlgorithmStrategy algorithmStrategy, int valueForCalculating) {
+        return algorithmStrategy.loopWhile(valueForCalculating);
+    }
+    private int[] useLoopDoWhile(AlgorithmStrategy algorithmStrategy, int valueForCalculating) {
+        return algorithmStrategy.loopDoWhile(valueForCalculating);
     }
 }
 
