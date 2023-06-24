@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class Fibonacci_sequenceTest {
+public class fibonacciSequenceTest {
     private final Fibonacci_sequence fibonacci_sequence = new Fibonacci_sequence();
     private final int[] expected = new int[]{0, 1, 1, 2, 3, 5, 8, 13, 21, 34};
     private final int valueForSequence = 10;
@@ -17,26 +17,15 @@ public class Fibonacci_sequenceTest {
     }
 
     @Test
-    public void solvebyloopfor() {
+    public void loopWhile() {
         int[] actual = fibonacci_sequence.loopWhile(valueForSequence);
         assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void loopWhile() {
+    public void loopDoWhile() {
         int[] actual = fibonacci_sequence.loopDoWhile(valueForSequence);
         assertArrayEquals(expected, actual);
     }
 
-    @Test
-    public void solveByLoopWhile() {
-    }
-
-    @Test
-    public void loopDoWhile() {
-    }
-
-    @Test
-    public void solveByLoopDoWhile() {
-    }
 }
