@@ -1,5 +1,6 @@
-package by.education.vintilov.Finding_the_Median.java;
+package by.education.vintilov.Finding_the_Median.test;
 
+import by.education.vintilov.Finding_the_Median.java.MedianValue;
 import org.junit.Assert;
 import org.junit.Test;
 
